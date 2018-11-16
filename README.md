@@ -1,6 +1,6 @@
-# A Terraform `random_pet` example
+# A Terraform example using external data and ternary conditional to populate count value
 
-This repository contains a Terraform `random_pet` example
+This repository contains an example code that gets data from external source (bash script) and uses a ternary contitional to populate the count value for a resource
 
 ## Usage
 
@@ -16,3 +16,6 @@ $ terraform apply
 $ terraform destroy
 ```
 
+Note:
+
+When the external data provider returns NULL, the resource does not get created because "count=0" 
